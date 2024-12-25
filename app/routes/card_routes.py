@@ -14,8 +14,6 @@ bp=Blueprint("cards_bp", __name__, url_prefix="/boards/<board_id>/cards")
 def create_card(board_id):
 
     request_body = request.get_json()
-
-   
     try:
         new_card = Card.from_dict(request_body)
     except KeyError as e:
