@@ -26,7 +26,7 @@ def create_board():
     return response, 201
   
   
-@boards_bp.get("")
+@bp.get("")
 def get_all_boards():
   query = db.select(Board).order_by(Board.board_id)
   boards = db.session.scalars(query)
