@@ -15,13 +15,13 @@ class Card(db.Model):
     def create_new_card(message, board_id):
         return Card(message=message, likes_count=0, board_id=board_id)
 
-    def from_dict(request_body):
-        new_card = Card(
-            message=request_body["message"],
-            likes_count=request_body["likes_count"],
-            board_id=request_body["board_id"],
-        )
-        return new_card
+    # def from_dict(request_body):
+    #     new_card = Card(
+    #         message=request_body["message"],
+    #         likes_count=request_body["likes_count"],
+    #         board_id=request_body["board_id"],
+    #     )
+    #     return new_card
 
     def to_dict(self):
         new_card = {
